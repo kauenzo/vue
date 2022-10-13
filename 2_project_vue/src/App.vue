@@ -1,14 +1,18 @@
 <template>
   <primeiroComponente/>
   <p>O dado de app é: {{testando}}</p>
+  <LifeCycle></LifeCycle>
 </template>
 
 <script>
-  import primeiroComponente from "./components/primeiroComponente.vue";
+  import primeiroComponente from "@/components/primeiroComponente";
+  import LifeCycle from "@/components/lifeCycle";
+
   export default {
     name: 'App',
     components: {
-      primeiroComponente
+      primeiroComponente,
+      LifeCycle
     },
     data(){
       return{
