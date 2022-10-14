@@ -10,7 +10,8 @@
     <li>eficácia</li>
     <li>ninguém</li>
   </ul>
-  <p v-show="possuiOShape">Às vezes não sinto vontade de treinar, mas sei dos benefícios de estar no shape.</p>
+  <button @click="showShape">{{ texto_botao }}</button>
+  <p v-show="treino">Às vezes não sinto vontade de treinar, mas sei dos benefícios de estar no shape.</p>
   <p>Entrar no <a v-bind:href="link_shape">shape</a></p>
   <Picture></Picture>
 </template>
@@ -26,8 +27,20 @@ export default {
     return {
       possuiOShape: true,
       isMadrugada: true,
+      treino: true,
       horario: "madrugada",
-      link_shape: '#'
+      link_shape: '#',
+      texto_botao: 'Mostrar o shape'
+    }
+  },
+  methods:{
+    showShape(){
+      this.treino = !this.treino;
+      if(!this.treino){
+        this.texto_botao = "Mostrar shape"
+      }else{
+        this.texto_botao = "Ocultar shape"
+      }
     }
   }
 }
