@@ -32,5 +32,7 @@
 <style>
   body{
     font-family: 'Open Sans', sans-serif;
+    background-color: #333;
+    color: #FFF;
   }
 </style>
