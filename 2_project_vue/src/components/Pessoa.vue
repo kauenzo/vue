@@ -1,5 +1,6 @@
 <template>
-  <h2>Em pleno 2022, ano do {{ nome }}.</h2>
+  <h1>Em pleno 2022, ano da tecnologia.</h1>
+  <h2>Conhe o {{nome}}? Ta lançando um foguete</h2>
   <Info></Info>
 </template>
 

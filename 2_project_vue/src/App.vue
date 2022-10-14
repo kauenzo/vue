@@ -1,7 +1,7 @@
 <template>
-  <PrimeiroComponente/>
+<!--  <PrimeiroComponente/>
   <p>O dado de app é: {{testando}}</p>
-  <LifeCycle></LifeCycle>
+  <LifeCycle></LifeCycle>-->
   <Pessoa></Pessoa>
 </template>
 
