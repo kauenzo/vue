@@ -1,18 +1,21 @@
 <template>
-  <primeiroComponente/>
+  <PrimeiroComponente/>
   <p>O dado de app é: {{testando}}</p>
   <LifeCycle></LifeCycle>
+  <Pessoa></Pessoa>
 </template>
 
 <script>
-  import primeiroComponente from "@/components/primeiroComponente";
-  import LifeCycle from "@/components/lifeCycle";
+  import PrimeiroComponente from "@/components/PrimeiroComponente";
+  import LifeCycle from "@/components/LifeCycle";
+  import Pessoa from "@/components/Pessoa";
 
   export default {
     name: 'App',
     components: {
-      primeiroComponente,
-      LifeCycle
+      PrimeiroComponente: PrimeiroComponente,
+      LifeCycle,
+      Pessoa: Pessoa
     },
     data(){
       return{

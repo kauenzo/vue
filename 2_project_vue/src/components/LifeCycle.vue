@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "lifeCycle",
+  name: "LifeCycle",
   data(){
     return{
       nome: 'indefinido'
