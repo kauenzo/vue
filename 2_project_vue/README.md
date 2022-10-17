@@ -1,16 +1,26 @@
 # 2_project_vue
 
-## Project setup
+## Instalar Vue Cli
+```
+npm install -g @vue/cli
+```
+
+## Confirmar versão do Vue
+```
+vue --version
+```
+
+## Setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilar em ambiente de desenvolvimento
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compilar e minificar arquivos em ambiente de produção
 ```
 npm run build
 ```
