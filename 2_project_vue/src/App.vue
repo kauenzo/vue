@@ -1,5 +1,6 @@
 <template>
-<!--  <PrimeiroComponente/>-->
+  <Header></Header>
+  <!--  <PrimeiroComponente/>-->
 <!--  <p>O dado de app é: {{testando}}</p>-->
 <!--  <LifeCycle></LifeCycle>-->
   <Pessoa></Pessoa>
@@ -9,10 +10,12 @@
   import PrimeiroComponente from "@/components/PrimeiroComponente";
   import LifeCycle from "@/components/LifeCycle";
   import Pessoa from "@/components/Pessoa";
+  import Header from "@/components/Header";
 
   export default {
     name: 'App',
     components: {
+      Header,
       PrimeiroComponente: PrimeiroComponente,
       LifeCycle,
       Pessoa: Pessoa
@@ -34,5 +37,17 @@
     font-family: 'Open Sans', sans-serif;
     background-color: #333;
     color: #FFF;
+  }
+
+  a, a:visited{
+    color: red;
+  }
+  a:hover{
+    color:green;
+  }
+
+  .botao-shape{
+    background-color: #000;
+    color: #FFFFFF;
   }
 </style>
