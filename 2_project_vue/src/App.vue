@@ -40,7 +40,7 @@
   }
 
   a, a:visited{
-    color: red;
+    color: #FFFFFF;
   }
   a:hover{
     color:green;
