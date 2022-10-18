@@ -1,8 +1,8 @@
 <template>
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Projetos</a></li>
-    <li><a href="#">Contato</a></li>
+    <li><a href="#">2022</a></li>
+    <li><a href="#">Tecnologia</a></li>
+    <li><a href="#">Foguete</a></li>
   </ul>
 </template>
 
