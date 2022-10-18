@@ -1,9 +1,9 @@
 <template>
   <Header></Header>
-  <!--  <PrimeiroComponente/>-->
+    <PrimeiroComponente/>
 <!--  <p>O dado de app é: {{testando}}</p>-->
 <!--  <LifeCycle></LifeCycle>-->
-  <Pessoa></Pessoa>
+<!--  <Pessoa></Pessoa>-->
 </template>
 
 <script>

@@ -1,8 +1,14 @@
 <template>
   <h1>Em pleno 2022, ano da tecnologia.</h1>
   <h2>Conhe o {{nome}}? Ta lançando um foguete</h2>
+  <div>
+    <button @click="ShowInfo">{{ txt_bnt_info }}</button>
+    <div v-show="info">
+      <br>
+      <Info></Info>
+    </div>
+  </div>
   <Form></Form>
-<!--  <Info></Info>-->
 </template>
 
 
@@ -14,7 +20,19 @@ export default {
   components: {Form, Info},
   data(){
     return{
-      nome: "Elon Musk"
+      nome: "Elon Musk",
+      info: true,
+      txt_bnt_info: "Mostrar Info"
+    }
+  },
+  methods: {
+    ShowInfo(){
+      this.info = !this.info;
+      if(!this.info){
+        this.txt_bnt_info = "Mostrar Info"
+      }else{
+        this.txt_bnt_info = "Ocultar Info"
+      }
     }
   }
 }
