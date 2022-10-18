@@ -1,29 +1,36 @@
-# 2_project_vue
+# Estudos de Vue 3
+Seguindo como base o Canal no Youtube [Matheus Battisti - Hora de Codar](https://www.youtube.com/playlist?list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL)
 
-## Instalar Vue Cli
+## Setup
+
+### Install Vue Cli
 ```
 npm install -g @vue/cli
 ```
 
-## Confirmar versão do Vue
+### Confirm vue version
 ```
 vue --version
 ```
 
-## Setup
+### Project setup
 ```
 npm install
 ```
 
-### Compilar em ambiente de desenvolvimento
+### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compilar e minificar arquivos em ambiente de produção
+### Compiles and minifies for production
 ```
 npm run build
 ```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+
