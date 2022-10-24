@@ -1,15 +1,17 @@
 <template>
-  <div>
-    <span>Marcha nos projetos. </span>
-    <span v-if="possuiOShape">O shape fala por mim. </span>
-    <span v-else>Se você joga Minecraft, obrigatóriamente precisa estar no shape. </span>
-    <span v-show="isMadrugada">De {{ horario }} minha mente vai longe. </span>
-    <treino></treino>
-    <button @click="showShape" class="botao-shape">{{ texto_botao }}</button>
-    <p v-show="treino">Às vezes não sinto vontade de treinar, mas sei dos benefícios de estar no shape.</p>
-    <p>Entrar no <a v-bind:href="link_shape">shape</a></p>
-    <Picture></Picture>
-  </div>
+  <p> {{email}}</p>
+  <span v-if="possuiOShape">O shape fala por mim. </span>
+  <!--  <div>
+      <span>Marcha nos projetos. </span>
+      <span v-if="possuiOShape">O shape fala por mim. </span>
+      <span v-else>Se você joga Minecraft, obrigatóriamente precisa estar no shape. </span>
+      <span v-show="isMadrugada">De {{ horario }} minha mente vai longe. </span>
+      <treino></treino>
+      <button @click="showShape" class="botao-shape">{{ texto_botao }}</button>
+      <p v-show="treino">Às vezes não sinto vontade de treinar, mas sei dos benefícios de estar no shape.</p>
+      <p>Entrar no <a v-bind:href="link_shape">shape</a></p>
+      <Picture></Picture>
+    </div>-->
 </template>
 
 <script>
@@ -21,9 +23,12 @@ export default {
     Treino,
     Picture
   },
+  props: {
+    email: String,
+    possuiOShape: Boolean
+  },
   data(){
     return {
-      possuiOShape: true,
       isMadrugada: true,
       treino: true,
       horario: "madrugada",

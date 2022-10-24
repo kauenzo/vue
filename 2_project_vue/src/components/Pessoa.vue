@@ -5,10 +5,10 @@
     <button @click="ShowInfo">{{ txt_bnt_info }}</button>
     <div v-show="info">
       <br>
-      <Info></Info>
+      <Info :email="email" :possuiOShape=true />
     </div>
   </div>
-  <Form></Form>
+  <Form />
 </template>
 
 
@@ -22,7 +22,8 @@ export default {
     return{
       nome: "Elon Musk",
       info: true,
-      txt_bnt_info: "Mostrar Info"
+      txt_bnt_info: "Mostrar Info",
+      email: "dev.kaue@icloud.com"
     }
   },
   methods: {

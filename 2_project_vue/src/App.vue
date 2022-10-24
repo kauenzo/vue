@@ -1,9 +1,9 @@
 <template>
-  <Header></Header>
-    <PrimeiroComponente/>
+  <Header :isLogado=true />
+<!--    <PrimeiroComponente/>-->
 <!--  <p>O dado de app é: {{testando}}</p>-->
 <!--  <LifeCycle></LifeCycle>-->
-<!--  <Pessoa></Pessoa>-->
+  <Pessoa />
 </template>
 
 <script>
