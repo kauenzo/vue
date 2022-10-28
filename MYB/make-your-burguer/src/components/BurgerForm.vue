@@ -1,7 +1,5 @@
 <template>
-  <p>Burger Form Component</p>
-
-  <p>Componente de mensagem</p>
+  <Message :msg="msg" v-show="msg" />
   <form id="burger-form" @submit="createBurger">
     <div class="input-container">
       <label for="nome">Nome do cliente: </label>
@@ -25,9 +23,12 @@
         </option>
       </select>
     </div>
+    <div>
+
+    </div>
 <!--todo por algum motivo não ta trazendo os opcionais-->
     <div id="opcionais-container" class="input-container">
-      <label id="opcionais-title" for="opcionais">Selecione os opcionais: </label>
+      <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
       <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
         <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
         <span>{{ opcional.tipo }}</span>
@@ -41,8 +42,10 @@
 </template>
 
 <script>
+import Message from "@/components/Message";
 export default {
   name: "BurgerForm",
+  components: {Message},
   data() {
     return{
       paes: null,
@@ -88,10 +91,13 @@ export default {
       const res = await req.json();
 
       console.log(res);
+      console.log(res.id);
 
       //todo colocar msg de sistema
+      this.msg = `Pedido N° ${res.id} realizado com sucesso!`
 
       //todo limpar msg
+      setTimeout(()=> this.msg = "", 3000)
 
       // limpar os campos ao enviar
       this.nome = "";
@@ -161,9 +167,16 @@ export default {
     margin: 0 auto;
     cursor: pointer;
     transition: .5s;
+    border-radius: 20px;
+    /*-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);*/
   }
   .submit-btn:hover {
     background-color: transparent;
     color: #222;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
   }
 </style>
